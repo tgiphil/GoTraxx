@@ -1,0 +1,260 @@
+﻿<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="3.5">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.21022</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{16E52E17-385D-4BDA-98A5-7D3AF68F821B}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>GoTraxx</RootNamespace>
+    <AssemblyName>GoTraxx</AssemblyName>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <ManifestCertificateThumbprint>94929A636B22EC78C93A639E83001D07BA239712</ManifestCertificateThumbprint>
+    <ManifestKeyFile>SharpGoBot_TemporaryKey.pfx</ManifestKeyFile>
+    <GenerateManifests>false</GenerateManifests>
+    <SignManifests>false</SignManifests>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>2.0</OldToolsVersion>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <StartupObject>GoTraxx.Program</StartupObject>
+    <TargetZone>LocalIntranet</TargetZone>
+    <PublishUrl>c:\CodePlex\Publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <SignAssembly>false</SignAssembly>
+    <NoWin32Manifest>true</NoWin32Manifest>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="nunit.framework, Version=2.4.7.0, Culture=neutral, PublicKeyToken=96d09a1eb7f44a77, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files\NUnit 2.4.7\bin\nunit.framework.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="DistributedSearch\NagNode.cs" />
+    <Compile Include="SearchMethodAB_NAG_ID_TT.cs" />
+    <Compile Include="Pattern\FusekiDetector.cs" />
+    <Compile Include="SearchMethodAB_ID_TT.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="TranspositionTablePlus.cs" />
+    <Compile Include="GameRecordBoardAdapter.cs" />
+    <Compile Include="Pattern\PatternReplaceMatrixTest.cs" />
+    <Compile Include="Pattern\PatternReplaceMatrix.cs" />
+    <Compile Include="SimpleGoBoard.cs" />
+    <Compile Include="SolverExtended.cs" />
+    <Compile Include="Utility\TCPConnection.cs" />
+    <Compile Include="DistributedSearch\Worker.cs" />
+    <Compile Include="DistributedSearch\WorkerFunctions.cs" />
+    <Compile Include="SearchMethodAB_ID_TT_PVS.cs" />
+    <Compile Include="DistributedSearch\NagCoordinator.cs" />
+    <Compile Include="Utility\TCPService.cs" />
+    <Compile Include="DistributedSearch\WorkerProxy.cs" />
+    <Compile Include="GameRecordFilter.cs" />
+    <Compile Include="GoChain.cs" />
+    <Compile Include="GTP\GTPRegression.cs" />
+    <Compile Include="GTP\GTPRegressionPattern.cs" />
+    <Compile Include="GTP\GTPRegressionPatternTest.cs" />
+    <Compile Include="MoveList.cs" />
+    <Compile Include="MoveListTest.cs" />
+    <Compile Include="PrincipalVariation.cs" />
+    <Compile Include="ScoreSystemFactory.cs" />
+    <Compile Include="Color.cs" />
+    <Compile Include="ColorEnclosedRegion.cs" />
+    <Compile Include="ColorEnclosedRegions.cs" />
+    <Compile Include="Utility\Compare.cs" />
+    <Compile Include="Coordinate.cs" />
+    <Compile Include="CoordinateSystem.cs" />
+    <Compile Include="CoordinateSystemTest.cs" />
+    <Compile Include="Pattern\DFAMatrix.cs" />
+    <Compile Include="Pattern\DFAMatrixBuilder.cs" />
+    <Compile Include="Pattern\DFAMatrixCache.cs" />
+    <Compile Include="Pattern\DFAMatrixCache3.cs" />
+    <Compile Include="Pattern\DFANode.cs" />
+    <Compile Include="Pattern\DFAPattern.cs" />
+    <Compile Include="Utility\DirectoryFiles.cs" />
+    <Compile Include="Utility\ErrorManagement.cs" />
+    <Compile Include="GameRecord.cs" />
+    <Compile Include="GameRecords.cs" />
+    <Compile Include="GoBlock.cs" />
+    <Compile Include="GoBlockBase.cs" />
+    <Compile Include="GoBlocksAdjacentCollection.cs" />
+    <Compile Include="GoBlockUndoAddStone.cs" />
+    <Compile Include="GoBlockUndoCapture.cs" />
+    <Compile Include="GoBlockUndoEnemyStone.cs" />
+    <Compile Include="GoBlockUndoMerge.cs" />
+    <Compile Include="GoBoard.cs" />
+    <Compile Include="GoBoardHelper.cs" />
+    <Compile Include="GoBoardTest.cs" />
+    <Compile Include="GoBoardUndoState.cs" />
+    <Compile Include="GoCell.cs" />
+    <Compile Include="GoCellUndoChange.cs" />
+    <Compile Include="GoEmptyBlock.cs" />
+    <Compile Include="GoEmptyBlockUndoRemove.cs" />
+    <Compile Include="GoEmptyBlockUndoRemoveLiberty.cs" />
+    <Compile Include="GTP\GTPGoBoard.cs" />
+    <Compile Include="GTP\GTPCommand.cs" />
+    <Compile Include="GTP\GTPCommandTest.cs" />
+    <Compile Include="GTP\GTPCommBase.cs" />
+    <Compile Include="GTP\GTPCommCGOS.cs" />
+    <Compile Include="GTP\GTPCommConsole.cs" />
+    <Compile Include="GTP\GTPCommInternal.cs" />
+    <Compile Include="GTP\GTPEngine.cs" />
+    <Compile Include="GTP\GTPInternalResponse.cs" />
+    <Compile Include="Intersection.cs" />
+    <Compile Include="Utility\MemFile.cs" />
+    <Compile Include="MiaiStrategy.cs" />
+    <Compile Include="Pattern\Pattern.cs" />
+    <Compile Include="Pattern\PatternActionAttribute.cs" />
+    <Compile Include="Pattern\PatternActionCode.cs" />
+    <Compile Include="Pattern\PatternActionCompiler.cs" />
+    <Compile Include="Pattern\PatternActionFunctions.cs" />
+    <Compile Include="Pattern\PatternActionOperand.cs" />
+    <Compile Include="Pattern\PatternAttribute.cs" />
+    <Compile Include="Pattern\PatternAttributeFunctions.cs" />
+    <Compile Include="Pattern\PatternCode.cs" />
+    <Compile Include="Pattern\PatternCollection.cs" />
+    <Compile Include="Pattern\PatternCompiled.cs" />
+    <Compile Include="Pattern\PatternCompiler.cs" />
+    <Compile Include="Pattern\PatternConstraintAttribute.cs" />
+    <Compile Include="Pattern\PatternDetector.cs" />
+    <Compile Include="Pattern\PatternFunctionParameters.cs" />
+    <Compile Include="Pattern\PatternFunctions.cs" />
+    <Compile Include="Pattern\PatternInterpretor.cs" />
+    <Compile Include="Pattern\PatternInterpretorTest.cs" />
+    <Compile Include="Pattern\PatternKey.cs" />
+    <Compile Include="Pattern\PatternMap.cs" />
+    <Compile Include="Pattern\PatternMergedAttributes.cs" />
+    <Compile Include="Pattern\PatternOperand.cs" />
+    <Compile Include="Pattern\PatternScanner.cs" />
+    <Compile Include="Pattern\PatternSyntax.cs" />
+    <Compile Include="Pattern\PatternTokens.cs" />
+    <Compile Include="PerformanceTest.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Region.cs" />
+    <Compile Include="RegionTest.cs" />
+    <Compile Include="SafetyMap.cs" />
+    <Compile Include="SafetyStatus.cs" />
+    <Compile Include="Score.cs" />
+    <Compile Include="ScoreChineseRules.cs" />
+    <Compile Include="ScoreJapaneseRules.cs" />
+    <Compile Include="Search.cs" />
+    <Compile Include="SearchMethod.cs" />
+    <Compile Include="SearchEngine.cs" />
+    <Compile Include="SearchMethodAlphaBeta.cs" />
+    <Compile Include="SearchMethodAB_ID_PVS.cs" />
+    <Compile Include="SearchMethodFactory.cs" />
+    <Compile Include="SearchMethodMinMax.cs" />
+    <Compile Include="SearchOptions.cs" />
+    <Compile Include="SearchInterface.cs" />
+    <Compile Include="SearchStandard.cs" />
+    <Compile Include="SearchStatus.cs" />
+    <Compile Include="SearchTimeEstimator.cs" />
+    <Compile Include="SGF\SGFCollection.cs" />
+    <Compile Include="SGF\SGFGameSamples.cs" />
+    <Compile Include="SGF\SGFNode.cs" />
+    <Compile Include="SGF\SGFProperty.cs" />
+    <Compile Include="SGF\SGFSequence.cs" />
+    <Compile Include="SimpleBoardEvaluator.cs" />
+    <Compile Include="SimpleGoals.cs" />
+    <Compile Include="Utility\SimpleTimer.cs" />
+    <Compile Include="SolverBenson.cs" />
+    <Compile Include="SolverFactory.cs" />
+    <Compile Include="SolverMuller.cs" />
+    <Compile Include="SolverNull.cs" />
+    <Compile Include="Utility\StringMap.cs" />
+    <Compile Include="TranspositionTable.cs" />
+    <Compile Include="Utility\ThreadPoolHelper.cs" />
+    <Compile Include="Utility\TriState.cs" />
+    <Compile Include="UndoBase.cs" />
+    <Compile Include="UndoStack.cs" />
+    <Compile Include="ZobristHash.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="License.rtf" />
+    <None Include="Patterns\BadShapeHints.db" />
+    <None Include="Patterns\Better.db" />
+    <None Include="Patterns\Blunders.db" />
+    <None Include="Patterns\GoodShapeHints.db" />
+    <None Include="Patterns\Test.db" />
+    <None Include="Regression\Benson\benson.tst" />
+    <None Include="Regression\Benson\benson_safe1.sgf" />
+    <None Include="Regression\Benson\benson_safe2.sgf" />
+    <None Include="Regression\Benson\benson_safe3.sgf" />
+    <None Include="Regression\Benson\benson_unsafe.sgf" />
+    <None Include="Regression\Muller\muller.tst" />
+    <None Include="Regression\Muller\muller1.sgf" />
+    <None Include="Regression\Muller\muller2.sgf" />
+    <None Include="Regression\Muller\muller3.sgf" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.2.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 2.0 %28x86%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.0 %28x86%29</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="License.txt" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
